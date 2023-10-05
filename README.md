@@ -112,7 +112,7 @@ use adb to run script on our destination Android device [update_mtime_from_epoch
 
 ## Images and videos exported from Apple iOS devices
 
-Images and videos exported from Apple iOS devices do not have timestamps in their filenames. Therefore, some preprocessing is required on the exporting device (in this case, your Mac). There are two methods:
+Images and videos exported from Apple iOS devices do not have timestamps in their filenames. Therefore, some preprocessing is required on the exporting device (in this case, my Mac). There are two methods:
 
 The first method involves exporting directly from Mac Photos while preserving the correct mtime. In this case, you can simply write the mtime to the filename on your Mac, and then use the "update_mtime_from_timestamp.sh" script on the target Android device. You can execute this script on your Mac.
 
