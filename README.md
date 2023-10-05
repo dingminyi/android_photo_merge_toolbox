@@ -53,7 +53,7 @@ filelist.txt 的生成方式同上。
 
 [add_timestamp_to_filename_from_mtime.sh](https://github.com/dingminyi/android_photo_merge_toolbox/blob/main/add_timestamp_to_filename_from_mtime.sh)
 
-第二种办法是从EXIF中获得，但是需要对exiftool的使用有一些理解,此处提供一些样例命令：
+第二种情况是改对了mtime也没用，因为目标设备相册对于视频读的是mp4文件中的MediaCreateDate（比如小米MIUI），如果这个文件中的时间有问题，解决方式是需要修改文件，这里需要对exiftool的使用有一些理解,此处提供一些样例命令：
 ```shell
 exiftool -api "QuickTimeUTC" "-MediaCreateDate<ContentCreateDate" *.m4v
 exiftool -api "QuickTimeUTC" "-TrackCreateDate<ContentCreateDate" *.m4v
